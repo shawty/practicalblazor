@@ -3,8 +3,10 @@
 
 @foreach (var user in _allUsers)
 {
-  <UserEntry UserData="@user"></UserEntry>
+  <UserEntry UserData="@user" ClickHandler="@SelectClicked"></UserEntry>
 }
+
+<p>Selected user ID: <span>@_selectedId</span></p>
 
 @code {
 
@@ -12,5 +14,12 @@
   private Users _usersService { get; set; }
 
   private List<UserModel> _allUsers => _usersService.FetchAll();
+
+  private int _selectedId { get; set; } = 0;
+
+  private void SelectClicked(int id)
+  {
+    _selectedId = id;
+  }
 
 }

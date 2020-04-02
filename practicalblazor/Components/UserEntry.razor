@@ -41,7 +41,7 @@
 
   <div>
     <p>Message: <span>@_message</span></p>
-    <button type="button" @onclick="@(e => ClickHandler(e, UserData.Id) )" >Click Me</button>
+    <button type="button" @onclick="@(e => ClickHandler.InvokeAsync(UserData.Id) )" >Click Me</button>
   </div>
 
 </div>
@@ -54,9 +54,7 @@
 
   private string _message { get; set; } = "No message yet";
 
-  private void ClickHandler(MouseEventArgs e, int id)
-  {
-    _message = $"I have had my button clicked! {id}";
-  }
+  [Parameter]
+  public EventCallback<int> ClickHandler { get; set; }
 
 }
