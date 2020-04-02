@@ -10,9 +10,9 @@ namespace practicalblazor.Services
   {
     private List<UserModel> _users = new List<UserModel>() {
       new UserModel() { Id = 1, FirstName = "Peter", LastName = "Shaw", Age = 21, Location = "North East England", Photo = "peter.jpg"},
-      new UserModel() { Id = 1, FirstName = "Fred", LastName = "Flintstone", Age = 30, Location = "Bedrock", Photo = "fred.jpg"},
-      new UserModel() { Id = 1, FirstName = "Yosamity", LastName = "Sam", Age = 50, Location = "Cartoon Land", Photo = "yosam.jpg"},
-      new UserModel() { Id = 1, FirstName = "Pink", LastName = "Panther", Age = 20, Location = "Durham, Durham", Photo = "panther.jpg"}
+      new UserModel() { Id = 2, FirstName = "Fred", LastName = "Flintstone", Age = 30, Location = "Bedrock", Photo = "fred.jpg"},
+      new UserModel() { Id = 3, FirstName = "Yosamity", LastName = "Sam", Age = 50, Location = "Cartoon Land", Photo = "yosam.jpg"},
+      new UserModel() { Id = 4, FirstName = "Pink", LastName = "Panther", Age = 20, Location = "Durham, Durham", Photo = "panther.jpg"}
     };
 
     public UserModel FetchUser(int id)
