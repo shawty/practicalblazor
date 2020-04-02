@@ -1,0 +1,50 @@
+﻿<style>
+  .userComp {
+    width: 100%;
+    height: 110px;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+  }
+
+  .userComp div {
+    margin-left: 10px;
+  }
+
+  .userComp div p {
+    margin: 0;
+    color: blue;
+  }
+
+    .userComp div p.suplamental {
+      color: green;
+    }
+
+</style>
+
+<div class="userComp">
+
+  <div>
+    <img src="/images/@UserData.Photo" />
+  </div>
+
+  <div>
+    <p>First Name: <span><b>@UserData.FirstName</b></span></p>
+    <p>Last Name: <span><b>@UserData.LastName</b></span></p>
+  </div>
+
+  <div>
+    <p class="suplamental">Age: <span><b>@UserData.Age</b></span></p>
+    <p class="suplamental">Location: <span><b>@UserData.Location</b></span></p>
+  </div>
+
+</div>
+
+
+@code {
+
+  [Parameter]
+  public UserModel UserData { get; set; }
+
+}
