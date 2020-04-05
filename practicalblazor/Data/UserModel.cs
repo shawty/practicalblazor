@@ -13,6 +13,6 @@ namespace practicalblazor.Data
     public int Age { get; set; }
     public string Location { get; set; }
     public string Photo { get; set; }
-
+    public string LoginName { get; set; }
   }
 }
